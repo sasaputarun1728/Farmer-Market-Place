@@ -1,0 +1,248 @@
+/* General Container Styling */
+.container1 {
+  padding: 20px;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  border-radius: 25px; /* Smooth rounded corners */
+  width: 100%; /* Full width for better responsiveness */
+  max-width: 300px; /* Maximum width for larger screens */
+  padding: 10px; /* Add padding for better spacing */
+  border: 1px solid black; /* Blue border for contrast */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle 3D effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition for focus effects */
+}
+
+.search-bar:focus {
+  width: 100%; /* Expand width on focus */
+  max-width: 300px; /* Maintain maximum width on focus */
+  outline: none; /* Remove default outline */
+  border-color: #0056b3; /* Darken border color on focus */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on focus */
+}
+
+.search-bar::placeholder {
+  color: #6c757d; /* Gray color for placeholder text */
+  opacity: 1; /* Ensure placeholder is visible */
+}
+
+.search-bar:hover {
+  border-color: #0056b3; /* Darken border color on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+/* Category Buttons */
+.category-buttons .btn {
+  transition: all 0.3s ease;
+  border-radius: 50px; /* Rounded buttons */
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Card Styling */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 10px 10px 0 0; /* Rounded corners on top */
+}
+
+/* Carousel */
+.carousel-item img {
+  transition: filter 0.5s ease;
+}
+
+.carousel-item img:hover {
+  filter: brightness(50%);
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* General Button Styling */
+.btn {
+  border-radius: 50px; /* Rounded buttons */
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: none; /* Remove default border */
+}
+
+/* Active Button (Green background, white text) */
+.btn-primary {
+  background-color: #28a745; /* Slightly lighter green */
+  color: white;
+  border: 2px solid #28a745; /* Match border with background */
+}
+
+.btn-primary:hover {
+  background-color: #218838; /* Darker green on hover */
+  color: white;
+  border-color: #218838; /* Match border with hover background */
+}
+
+/* Inactive Button (Light background, green text) */
+.btn-outline-primary {
+  background-color: transparent; /* Transparent background */
+  color: #28a745; /* Green text */
+  border: 2px solid #28a745; /* Green border */
+}
+
+.btn-outline-primary:hover {
+  background-color: #28a745; /* Green background on hover */
+  color: white;
+  border-color: #28a745; /* Match border with hover background */
+}
+
+/* Message Container */
+.message-container {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+
+.message-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.message-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Welcome Container (Greeting and Search Bar) */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  position: relative; /* Ensure proper positioning of the search bar */
+}
+
+.welcome-container .hello-message {
+  margin-bottom: 1rem; /* Add margin for spacing */
+}
+
+.welcome-container .search-bar {
+  position: absolute; /* Position the search bar absolutely */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  width: 100%; /* Full width for search bar */
+  max-width: 300px; /* Max width for large screens */
+  margin-top: 0; /* No margin on top */
+}
+
+/* Responsive styles */
+@media (max-width: 767.98px) {
+  .welcome-container {
+    align-items: center;
+    position: static; /* Reset position for small screens */
+    padding: 1rem; /* Adjust padding for small screens */
+  }
+
+  .welcome-container .search-bar {
+    position: static; /* Position search bar normally */
+    margin-top: 1rem; /* Margin for spacing below "Hello" message */
+    width: 100%; /* Full width for search bar */
+    max-width: none; /* Remove max-width on small screens */
+    text-align: center; /* Center align search bar on small screens */
+  }
+
+  .message-container h2 {
+    font-size: 1.5rem; /* Smaller font size on very small screens */
+  }
+
+  .message-container p {
+    font-size: 0.875rem; /* Smaller font size on very small screens */
+  }
+}
+
+@media (min-width: 576px) {
+  .message-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .message-container p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .message-container {
+    padding: 40px;
+  }
+
+  .message-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .message-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 992px) {
+  .message-container {
+    padding: 50px;
+  }
+
+  .message-container h2 {
+    font-size: 2.8rem;
+  }
+
+  .message-container p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Gradient text for hello-message */
+.hello-message h2 {
+  background: linear-gradient(90deg, #ca0886, #d48d11); /* Gradient from yellow to tomato */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hello-message p {
+  background: linear-gradient(90deg, #ca0886, #d48d11); /* Gradient from yellow to tomato */
+  -webkit-background-clip: text;
+  font-size: 22px;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

@@ -1,0 +1,110 @@
+/* Contact.css */
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f4f8, #e8efff); /* Updated gradient background */
+}
+
+.contact-details, .contact-form-section {
+    flex: 1;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 0 1rem; /* Added gap between containers */
+}
+
+.contact-details h1, .contact-form-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-details p {
+    font-size: 1.125rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Increased margin for spacing */
+}
+
+.contact-details p a {
+    color: #1890ff;
+    margin-left: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-details p a:hover {
+    text-decoration: underline;
+    color: #40a9ff;
+}
+
+.contact-details h3 {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+.contact-form-section {
+    flex: 2;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .ant-form-item {
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+.contact-form .ant-form-item-label {
+    font-size: 1.125rem;
+    color: #333;
+}
+
+.contact-form .ant-input,
+.contact-form .ant-input-textarea {
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    box-shadow: none;
+    background: #fafafa;
+}
+
+.contact-form .ant-input:focus,
+.contact-form .ant-input-textarea:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.contact-form .ant-btn-primary {
+    background: #1890ff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .ant-btn-primary:hover {
+    background: #40a9ff;
+    color: #ffffff;
+}
+
+.contact-form .ant-btn-primary:active {
+    background: #096dd9;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-details,
+    .contact-form-section {
+        margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
+    }
+}

@@ -1,0 +1,24 @@
+/* Toast Container */
+.toast-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  /* Toast Message */
+  .toast-message {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  

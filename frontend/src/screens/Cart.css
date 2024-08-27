@@ -1,0 +1,141 @@
+/* Cart.css */
+
+.container2 {
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+h2.text-primary {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary color */
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1; /* Light hover effect */
+}
+
+.table-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+}
+
+.btn-danger, .btn-success {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers controls horizontally */
+}
+
+.quantity-controls button {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; /* Ensures button text is readable */
+}
+
+.quantity-display {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  line-height: 40px; /* Matches the height of buttons for alignment */
+}
+
+.quantity-controls .btn {
+  margin: 0 5px; /* Adds spacing between buttons and display */
+}
+
+.text-success.fw-bold {
+  font-size: 24px;
+  color: #28a745; /* Bootstrap success color */
+}
+
+.btn-primary {
+  background-color: #28a745; /* Adjusted button color */
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+img[alt="Delete"] {
+  transition: transform 0.3s ease;
+}
+
+img[alt="Delete"]:hover {
+  transform: scale(1.2);
+}
+
+.text-center.text-secondary {
+  font-size: 18px;
+  color: #6c757d; /* Bootstrap secondary color */
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f8f9fa; /* Custom stripe color */
+}
+
+/* Success Alert Styling */
+.alert-success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff; /* White background */
+  border: 2px solid #28a745; /* Green border */
+  color: #4B0082; /* Indigo text color */
+  text-align: center;
+  padding: 20px 30px; /* Increased padding */
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Adding a shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-success .tick-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #a1ffce; /* Light green background */
+  color: #4B0082; /* Indigo color for the checkmark */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.alert-success .message {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.cart-indicator {
+  z-index: 999; /* Ensure it’s above other content */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffd900;
+  color: #fff;
+  padding: 10px;
+  border-top: 1px solid #4ebe2c;
+  display: none; /* Hide initially */
+}
+
+.cart-indicator.visible {
+  display: flex; /* Show when visible */
+}
+

@@ -1,0 +1,180 @@
+/* Navbar Base Styling */
+.custom-navbar {
+  padding: 10px 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the navbar is on top */
+  position: relative; /* Ensure proper positioning of absolute elements */
+}
+
+.custom-brand {
+  font-family: 'Georgia', serif;
+  color: #ffdd59 !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-brand:hover {
+  color: #ffd32a !important;
+}
+
+/* Link Styling and Animation */
+.custom-link {
+  color: #f8f9fa !important;
+  font-size: 18px;
+  margin-right: 15px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-link:hover {
+  color: #ffdd59 !important;
+}
+
+/* Cart Button Styling */
+.custom-cart-btn {
+  color: #ffdd59; /* Ensure the cart icon is visible against dark background */
+  font-size: 30px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1100; /* Ensure cart icon is on top */
+}
+
+.custom-cart-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Badge Animation */
+.animate-badge {
+  animation: bounce 1s infinite;
+  z-index: 1200;
+  background-color: #ff6b6b; /* Ensure badge has strong contrast */
+}
+
+/* Button Styling and Animation */
+.custom-logout-btn,
+.custom-login-btn,
+.custom-signup-btn {
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1100;
+}
+
+.custom-logout-btn {
+  background-color: #ff6b6b;
+}
+
+.custom-login-btn,
+.custom-signup-btn {
+  background-color: #1dd1a1;
+}
+
+.custom-logout-btn:hover,
+.custom-login-btn:hover,
+.custom-signup-btn:hover {
+  transform: scale(1.05);
+  background-color: #34a853;
+}
+
+/* Alert Animation */
+.custom-alert {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  z-index: 1050;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+/* Navbar Animation */
+.animate-navbar {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Logo Animation */
+.animate-logo {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Toggle Button Animation */
+.animate-toggle {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+/* Fade In/Out Animation */
+@keyframes fadeInOut {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .navbar-toggler {
+      position: absolute;
+      right: 20px; /* Align toggle button to the right */
+      top: 15px; /* Adjust top margin as needed */
+      z-index: 1200; /* Ensure toggle button is above other elements */
+  }
+
+  .navbar-collapse {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .navbar-nav {
+      margin-top: 10px; /* Add some space between navbar items and top */
+  }
+
+  .navbar-nav .nav-link {
+      padding: 10px;
+      display: block; /* Ensure each link is on a new line */
+  }
+
+  .custom-cart-btn {
+      margin: 10px 0; /* Add margin for better spacing */
+  }
+  
+  .profile-menu {
+      right: 0;
+      left: auto;
+      position: absolute;
+      top: 60px; /* Adjust to fit below the profile icon */
+      width: 200px; /* Set a width for the menu */
+  }
+}

@@ -1,0 +1,50 @@
+.container3 {
+    padding: 2rem;
+  }
+  
+  .order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 1rem;
+  }
+  
+  .order-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-secondary {
+    color: #6c757d;
+  }
+  
+  .mb-5 {
+    margin-bottom: 3rem;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+  }
+  

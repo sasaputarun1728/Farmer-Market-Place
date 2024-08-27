@@ -1,0 +1,377 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black; /* Dark, sophisticated background color */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  
+}
+
+/* Carousel */
+#carousel {
+  margin-top: 7px;
+  max-height: 700px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* Login Form */
+.login, .signup {
+  text-align: center;
+  color: black;
+}
+
+/* Form Labels */
+.form-label {
+  color: rgb(2, 2, 2);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Form Control Width */
+.form-control {
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Container Styling */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+   /* Full viewport width */
+  border-radius: 20px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5), /* Light gradient for contrast */
+    rgba(0, 0, 0, 0.5) /* Darker gradient for depth */
+  ), url('https://images.pexels.com/photos/1838552/pexels-photo-1838552.jpeg?auto=compress&cs=tinysrgb&w=1600&h=750&dpr=2');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Form Container */
+.form-container {
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+  width: 100%;
+  background: transparent;
+  max-width: 400px;
+  /* background: #fff; */
+  border: 1px solid #ddd;
+  min-height: 200px; /* Example value */
+}
+
+/* Form Control Focus Effect */
+.form-control:focus {
+  border-color: #76c7c0;
+  box-shadow: 0 0 8px 0 #76c7c0;
+}
+
+/* Button Styles */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-success:hover,
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+/* Alert Success */
+.alert-success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff; /* White background */
+  border: 2px solid #28a745; /* Green border */
+  color: #4B0082; /* Indigo text color */
+  text-align: center;
+  padding: 20px 30px; /* Increased padding */
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Adding a shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-success .tick-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #a1ffce; /* Light green background */
+  color: #4B0082; /* Indigo color for the checkmark */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.alert-success .message {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+/* Help Text */
+#emailHelp {
+  color: black;
+}
+
+/* Form Buttons Styling */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-buttons .btn {
+  width: 48%;
+}
+
+.btn-bg-white {
+  background-color: #fff;
+  text-decoration: none;
+  border: 1px solid #28a745;
+  color: #28a745;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-bg-white:hover {
+  background-color: #28a745;
+  color: #fff;
+  border-color: #28a745;
+  text-decoration: none;
+}
+
+.mx-1 {
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+
+/* Badge Styles */
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.start-100 {
+  left: 100%;
+}
+
+.translate-middle {
+  transform: translate(-50%, -50%);
+}
+
+.badge {
+  padding: 0.5em 0.75em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #dc3545;
+}
+/* Add this to your CSS file */
+.bg-color-pink {
+  background: linear-gradient(
+    rgba(255, 192, 203, 0.8), /* Light pink gradient with transparency */
+    rgba(255, 105, 180, 0.8) /* Slightly darker pink gradient */
+  ); 
+  background-size: cover; /* Not needed here since there's no image */
+  background-position: top center; /* Not needed here since there's no image */
+  background-repeat: no-repeat; /* Not needed here since there's no image */
+}
+
+
+/* Quantity Display */
+.quantity-display {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+.container2 {
+  min-height: 80vh; /* Ensure the container takes up a large portion of the screen */
+}
+
+.confirmation-card {
+  max-width: 600px; /* Restrict the width of the confirmation card */
+  width: 100%;
+  border-radius: 12px; /* Soft corners */
+  background-color: #f9f9f9; /* Light grey background for contrast */
+}
+
+h2.text-success {
+  font-size: 2rem; /* Larger, bold success message */
+  color: #28a745; /* Bright green color */
+}
+
+p.lead {
+  font-size: 1.2rem; /* Slightly larger text for better readability */
+  color: #333; /* Darker text for better contrast */
+}
+
+button.btn-lg {
+  background-color: #007bff; /* Primary blue background */
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px; /* Rounded button corners */
+}
+
+button.btn-lg:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border: none;
+}
+
+/* MyOrder.css */
+
+/* General container styling */
+.container3 {
+  padding: 20px;
+  
+}
+
+/* Card styling */
+.order-card {
+  background-color: #d0cccc; /* Dark red background for the order card */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-date {
+  color: #333;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #424040; /* Set a white background for the card itself */
+}
+
+
+.card-body {
+  padding: 15px;
+  background-color: rgb(249, 242, 242);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-text {
+  color: #555;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.text-secondary {
+  color: #6c757d;
+}
+
+.order-card-header {
+  background-color: #007bff; /* Blue background for the header */
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.order-card-footer {
+  background-color: pink; /* Pink background for the footer */
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-3, .mb-4, .mb-5 {
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-12, .col-md-6, .col-lg-4 {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .order-card {
+    padding: 10px;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+}
+
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin: 50px 20px;
+    padding: 20px;
+  }
+
+  .form-buttons .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
