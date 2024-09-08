@@ -37,6 +37,7 @@ app.get("/api/getUser/:email", async (req, res) => {
 app.use("/api", require("./routes/CreateUser"));
 app.use("/api", require("./routes/DisplayData"));
 app.use("/api", require("./routes/OrderData"));
+app.use("/api", require("./routes/FarmerDetails"));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

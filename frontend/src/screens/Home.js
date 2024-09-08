@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer"; // Import the Footer component
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 export default function Home() {
@@ -39,6 +41,7 @@ export default function Home() {
     localStorage.removeItem("token"); // Optionally remove the token
     setUserName("guest");
   };
+
   const fetchUserName = async () => {
     const email = localStorage.getItem("userEmail");
     if (!email) {
@@ -49,7 +52,7 @@ export default function Home() {
     try {
       const response = await fetch(`http://localhost:5000/api/getUser/${email}`);
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
       const data = await response.json();
       setUserName(data.name || "guest");
@@ -65,8 +68,6 @@ export default function Home() {
     loadData();
     fetchUserName();
   }, []);
-
-
 
   const toggleCategory = (category) => {
     setSelectedCategories((prevCategories) =>
@@ -97,6 +98,11 @@ export default function Home() {
               <p>Welcome to Farmer's Market</p>
             </>
           )}
+          <div className="sell-item-container mt-3">
+            <Link to="/add-farmer-details" className="btn btn-outline-success">
+              🌾 If you want to sell your item, click here to add
+            </Link>
+          </div>
         </div>
 
         <div className="search-bar">
@@ -188,9 +194,7 @@ export default function Home() {
             <div className="d-flex flex-wrap justify-content-center mb-3 category-buttons">
               <button
                 className={`btn me-2 mb-2 ${
-                  selectedCategories.length === 0
-                    ? "btn-primary"
-                    : "btn-outline-primary"
+                  selectedCategories.length === 0 ? "btn-success" : "btn-outline-success"
                 }`}
                 onClick={() => setSelectedCategories([])}
               >
@@ -201,8 +205,8 @@ export default function Home() {
                   key={data._id}
                   className={`btn me-2 mb-2 ${
                     selectedCategories.includes(data.category)
-                      ? "btn-primary"
-                      : "btn-outline-primary"
+                      ? "btn-success"
+                      : "btn-outline-success"
                   }`}
                   onClick={() => toggleCategory(data.category)}
                 >
@@ -232,20 +236,14 @@ export default function Home() {
       <div className="message-container">
         <h2>🎉 Thank You for Visiting Our Marketplace! 🎉</h2>
         <p>
-          We are thrilled to have you here! 🎁 Your support means the world to us. 🌟 
-          Explore our handpicked selection of local products and enjoy unique finds! 🛒 
+          We are thrilled to have you here! 🎁 Your support means the world to us. 🌟
+          Explore our handpicked selection of local products and enjoy unique finds! 🛒
           Stay tuned for more exciting updates and special offers. 🎊
         </p>
       </div>
 
-      <div className="footer" style={{
-        textAlign: 'center',  
-        fontSize: '18px',     
-        padding: '20px',       
-        backgroundColor: 'black', 
-        color: '#6c757d'       
-      }}>
-        <p>© 2024 Farmer Market Place. All rights reserved.</p>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

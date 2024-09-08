@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-router.post('/foodData', (req, res) => {
+router.post("/foodData", (req, res) => {
   try {
     res.send([global.farmerdetails, global.foodCategory]);
   } catch (error) {
@@ -11,3 +11,4 @@ router.post('/foodData', (req, res) => {
 });
 
 module.exports = router;
+//

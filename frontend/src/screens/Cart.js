@@ -108,12 +108,14 @@ export default function Cart() {
             <strong>Total Price: {calculateTotalPrice()} INR</strong>
           </h4>
           {cartItems.length > 0 && (
-            <button
-              className="btn btn-primary mt-2 mt-md-0"
-              onClick={handleBuyNow}
-            >
-              Buy Now
-            </button>
+           <button
+           className="btn btn-primary mt-2 mt-md-0"
+           onClick={handleBuyNow}
+         >
+           Buy Now
+         </button>
+         
+          
           )}
         </div>
       </div>

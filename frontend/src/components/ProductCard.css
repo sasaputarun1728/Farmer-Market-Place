@@ -1,24 +1,55 @@
 /* Toast Container */
 .toast-container {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1050;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  /* Toast Message */
-  .toast-message {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Toast Message */
+.toast-message {
+  background-color: #05ae2a; /* Updated background color */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Custom Light Green Background */
+/* Custom Light Green Background */
+/* Custom Light Green Background */
+.cart-indicator.custom-light-green {
+  background-color: #3ce93c !important; /* Light Green */
+  color: #333333 !important; /* Charcoal Gray for text */
+}
+
+.cart-indicator .btn-light {
+  background-color: #004d00 !important; /* Dark Green */
+  color: #FFFFFF !important; /* White text */
+}
+
+
+/* Cart Indicator */
+.cart-indicator {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  width: 100%;
+}
+
+/* Button in Cart Indicator */
+

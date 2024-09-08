@@ -1,0 +1,48 @@
+.footer {
+/* Light green color */
+    padding: 10px 0; /* Reduce padding to decrease height */
+    color: #190202; /* Text color */
+    text-align: center;
+    font-size: 18px; /* Increase the text size */
+  }
+  
+  .footer .container6 {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 10px;
+  }
+  
+  .footer .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+  }
+  
+  .footer .text-muted {
+    color: #37ed1b; /* Adjust color for muted text */
+  }
+  
+  .footer .nav {
+    padding: 0;
+    margin: 10px 0; /* Adjust margin to fit within the footer */
+  }
+  
+  .footer .nav li {
+    margin: 0 10px;
+  }
+  
+  .footer .nav a {
+    color: #0fcd05; /* Dark text color for better visibility */
+    text-decoration: none;
+  }
+  
+  .footer .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Optional: Adjust footer heading size */
+  .footer h2 {
+    font-size: 20px; /* Adjust as needed */
+  }
+  

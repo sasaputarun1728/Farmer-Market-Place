@@ -1,5 +1,4 @@
-// ContextReducer.js
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer, useEffect } from "react";
 
 const CartStateContext = createContext();
 const CartDispatchContext = createContext();
@@ -41,9 +40,9 @@ const reducer = (state, action) => {
           ? { ...item, qty: item.qty > 1 ? item.qty - 1 : 1 }
           : item
       );
+
     case "DROP":
-      let empArray=[]
-      return empArray
+      return [];
 
     default:
       return state;
@@ -51,7 +50,18 @@ const reducer = (state, action) => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, []);
+  // Initialize state from localStorage
+  const initializeState = () => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  };
+
+  const [state, dispatch] = useReducer(reducer, [], initializeState);
+
+  // Save state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(state));
+  }, [state]);
 
   return (
     <CartDispatchContext.Provider value={dispatch}>

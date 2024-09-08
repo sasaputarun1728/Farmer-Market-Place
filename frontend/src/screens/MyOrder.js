@@ -85,7 +85,7 @@ export default function MyOrder() {
                       >
                         <div
                           className="card"
-                          style={{ width: "18rem", maxHeight: "400px" }}
+                          style={{ width: "18rem", maxHeight: "400px"  }}
                         >
                           {/* Image handling can be added here if needed */}
                           <div className="card-body">

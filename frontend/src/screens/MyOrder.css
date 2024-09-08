@@ -1,50 +1,52 @@
+/* Container styling */
 .container3 {
-    padding: 2rem;
-  }
-  
-  .order-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 1rem;
-  }
-  
-  .order-date {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .card {
-    border: none;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .card-body {
-    padding: 1rem;
-  }
-  
-  .card-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  
-  .card-text {
-    margin-bottom: 0.5rem;
-  }
-  
-  .text-secondary {
-    color: #6c757d;
-  }
-  
-  .mb-5 {
-    margin-bottom: 3rem;
-  }
-  
-  hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 1.5rem 0;
-  }
-  
+  padding: 2rem;
+}
+
+/* General order card styling */
+.order-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+/* Card styling specific to MyOrder */
+.order-card .card {
+  background-color: #e8f5e9 !important; /* Light green background */
+  border: 1px solid #c8e6c9; /* Slightly darker green border */
+}
+
+/* Additional card styling */
+.order-card .card-body {
+  padding: 1rem;
+}
+
+.order-card .card-title {
+  color: #2e7d32; /* Dark green text color */
+}
+
+.order-card .card-text {
+  color: #388e3c; /* Medium green text color */
+}
+
+/* Text and other styling */
+.order-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.text-secondary {
+  color: #6c757d;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 1.5rem 0;
+}

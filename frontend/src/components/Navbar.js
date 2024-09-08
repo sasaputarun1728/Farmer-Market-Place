@@ -69,7 +69,7 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     dispatch({ type: "DROP" }); // Clear the cart
-  
+
     notification.info({
       message: "Logged Out",
       description: "You have been logged out successfully.",
@@ -77,13 +77,12 @@ export default function Navbar() {
       className: "custom-notification",
       duration: 3, // Display for 3 seconds
     });
-  
+
     // Delay navigation to login page
     setTimeout(() => {
       navigate("/login");
     }, 3000); // 3 seconds delay
   };
-  
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -93,17 +92,20 @@ export default function Navbar() {
     setIsProfileOpen(!isProfileOpen);
   };
 
-  // Log state for debugging
-  console.log('isLoggedIn:', isLoggedIn);
-
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar animate-navbar">
+    <nav className="navbar navbar-expand-lg navbar-green custom-navbar animate-navbar">
       <div className="container-fluid">
+        {/* Updated link with image instead of text */}
         <Link
           className="navbar-brand fs-1 fst-italic custom-brand animate-logo"
           to="/"
         >
-          Farmer Market Place
+          <img
+            src="/caorousel/img3.jpg"
+            alt="Farmer Market Place Logo"
+            className="custom-logo"
+            style={{ height: "70px", width: "auto" }} // Adjust dimensions
+          />
         </Link>
         <button
           className="navbar-toggler animate-toggle"
@@ -111,9 +113,9 @@ export default function Navbar() {
           onClick={toggleMenu}
         >
           {isMenuOpen ? (
-            <FaTimes style={{ color: "yellow" }} />
+            <FaTimes style={{ color: "Black" }} />
           ) : (
-            <FaBars style={{ color: "yellow" }} />
+            <FaBars style={{ color: "Black" }} />
           )}
         </button>
         <div
@@ -157,7 +159,7 @@ export default function Navbar() {
               className="btn position-relative me-3 custom-cart-btn"
               to="/cart"
             >
-              <FaShoppingCart size={30} style={{ color: "yellow" }} />
+              <FaShoppingCart size={30} style={{ color: "white" }} />
               {uniqueItemCount > 0 && (
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger animate-badge">
                   {uniqueItemCount}
@@ -171,7 +173,7 @@ export default function Navbar() {
                   className="btn custom-profile-btn animate-button"
                   onClick={toggleProfile}
                 >
-                  <FaUserCircle size={35} style={{ color: "yellow" }} />
+                  <FaUserCircle size={35} style={{ color: "white" }} />
                 </button>
                 {isProfileOpen && (
                   <div

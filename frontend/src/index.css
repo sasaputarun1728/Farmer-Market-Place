@@ -1,15 +1,14 @@
-/* Global Styles */
+Global Styles
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black; /* Dark, sophisticated background color */
-  background-size: cover; /* Ensures the image covers the entire screen */
+  background-color: black;
+  background-size: cover;
   background-position: center;
   height: 100vh;
   color: #fff;
-  
 }
 
 /* Carousel */
@@ -17,20 +16,23 @@ body {
   margin-top: 7px;
   max-height: 700px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Login Form */
+/* Login & Signup Forms */
 .login, .signup {
   text-align: center;
   color: black;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
 }
+
 
 /* Form Labels */
 .form-label {
-  color: rgb(2, 2, 2);
+  color:black;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* Form Control Width */
@@ -45,15 +47,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-   /* Full viewport width */
+  height: 100vh;
   border-radius: 20px;
   background: linear-gradient(
-    rgba(255, 255, 255, 0.5), /* Light gradient for contrast */
-    rgba(0, 0, 0, 0.5) /* Darker gradient for depth */
+    rgba(255, 255, 255, 0.5),
+    rgba(0, 0, 0, 0.5)
   ), url('https://images.pexels.com/photos/1838552/pexels-photo-1838552.jpeg?auto=compress&cs=tinysrgb&w=1600&h=750&dpr=2');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -61,13 +62,11 @@ body {
 .form-container {
   padding: 30px;
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   background: transparent;
   max-width: 400px;
-  /* background: #fff; */
   border: 1px solid #ddd;
-  min-height: 200px; /* Example value */
 }
 
 /* Form Control Focus Effect */
@@ -98,14 +97,14 @@ body {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff; /* White background */
-  border: 2px solid #28a745; /* Green border */
-  color: #4B0082; /* Indigo text color */
+  background-color: #ffffff;
+  border: 2px solid #28a745;
+  color: #4B0082;
   text-align: center;
-  padding: 20px 30px; /* Increased padding */
+  padding: 20px 30px;
   border-radius: 10px;
   z-index: 1000;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Adding a shadow */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,8 +114,8 @@ body {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: #a1ffce; /* Light green background */
-  color: #4B0082; /* Indigo color for the checkmark */
+  background-color: #a1ffce;
+  color: #4B0082;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
@@ -179,26 +178,6 @@ body {
 }
 
 /* Badge Styles */
-.position-relative {
-  position: relative;
-}
-
-.position-absolute {
-  position: absolute;
-}
-
-.top-0 {
-  top: 0;
-}
-
-.start-100 {
-  left: 100%;
-}
-
-.translate-middle {
-  transform: translate(-50%, -50%);
-}
-
 .badge {
   padding: 0.5em 0.75em;
   font-size: 0.75rem;
@@ -206,17 +185,14 @@ body {
   color: #fff;
   background-color: #dc3545;
 }
-/* Add this to your CSS file */
+
+/* Background Gradient */
 .bg-color-pink {
   background: linear-gradient(
-    rgba(255, 192, 203, 0.8), /* Light pink gradient with transparency */
-    rgba(255, 105, 180, 0.8) /* Slightly darker pink gradient */
+    rgba(255, 192, 203, 0.8),
+    rgba(255, 105, 180, 0.8)
   ); 
-  background-size: cover; /* Not needed here since there's no image */
-  background-position: top center; /* Not needed here since there's no image */
-  background-repeat: no-repeat; /* Not needed here since there's no image */
 }
-
 
 /* Quantity Display */
 .quantity-display {
@@ -229,51 +205,44 @@ body {
   background-color: #f8f9fa;
   text-align: center;
 }
-.container2 {
-  min-height: 80vh; /* Ensure the container takes up a large portion of the screen */
-}
 
+/* Confirmation Card */
 .confirmation-card {
-  max-width: 600px; /* Restrict the width of the confirmation card */
+  max-width: 600px;
   width: 100%;
-  border-radius: 12px; /* Soft corners */
-  background-color: #f9f9f9; /* Light grey background for contrast */
+  border-radius: 12px;
+  background-color: #f9f9f9;
 }
 
 h2.text-success {
-  font-size: 2rem; /* Larger, bold success message */
-  color: #28a745; /* Bright green color */
+  font-size: 2rem;
+  color: #28a745;
 }
 
 p.lead {
-  font-size: 1.2rem; /* Slightly larger text for better readability */
-  color: #333; /* Darker text for better contrast */
+  font-size: 1.2rem;
+  color: #333;
 }
 
 button.btn-lg {
-  background-color: #007bff; /* Primary blue background */
+  background-color: #007bff;
   border: none;
   padding: 12px 24px;
   font-size: 1rem;
-  border-radius: 8px; /* Rounded button corners */
+  border-radius: 8px;
 }
 
 button.btn-lg:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  border: none;
+  background-color: #0056b3;
 }
 
 /* MyOrder.css */
-
-/* General container styling */
 .container3 {
   padding: 20px;
-  
 }
 
-/* Card styling */
 .order-card {
-  background-color: #d0cccc; /* Dark red background for the order card */
+  background-color: #d0cccc;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -289,9 +258,8 @@ button.btn-lg:hover {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #424040; /* Set a white background for the card itself */
+  background-color: #424040;
 }
-
 
 .card-body {
   padding: 15px;
@@ -319,14 +287,14 @@ button.btn-lg:hover {
 }
 
 .order-card-header {
-  background-color: #007bff; /* Blue background for the header */
+  background-color: #007bff;
   color: white;
   padding: 10px;
   border-radius: 8px 8px 0 0;
 }
 
 .order-card-footer {
-  background-color: pink; /* Pink background for the footer */
+  background-color: pink;
   padding: 10px;
   border-radius: 0 0 8px 8px;
 }
@@ -349,21 +317,6 @@ button.btn-lg:hover {
   padding: 0.5rem;
 }
 
-
-
-@media (max-width: 768px) {
-  .order-card {
-    padding: 10px;
-  }
-
-  .card-body {
-    padding: 10px;
-  }
-}
-
-
-
-/* Mobile Adjustments */
 @media (max-width: 768px) {
   .container {
     margin: 50px 20px;
@@ -373,5 +326,13 @@ button.btn-lg:hover {
   .form-buttons .btn {
     width: 100%;
     margin-top: 10px;
+  }
+
+  .order-card {
+    padding: 10px;
+  }
+
+  .card-body {
+    padding: 10px;
   }
 }

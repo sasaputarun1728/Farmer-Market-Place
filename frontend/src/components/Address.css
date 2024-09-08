@@ -1,12 +1,22 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/* Page Background Image */
+body {
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
 /* Address Container */
 .address-container {
   max-width: 600px;
   margin: 20px auto;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent background for the container */
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -15,7 +25,7 @@
 .address-title {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #333;
+  color: #022103; /* Light green color */
   margin-bottom: 25px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -35,22 +45,22 @@
 /* Input Styling */
 .address-input {
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #c8e6c9; /* Light green border */
   padding: 12px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px rgba(76, 175, 80, 0.1); /* Light green shadow */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .address-input:focus {
-  border-color: #28a745;
-  box-shadow: 0 0 4px rgba(40, 167, 69, 0.2);
+  border-color: #4caf50; /* Light green */
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.2); /* Light green shadow */
 }
 
 /* Input Placeholder Styling */
 .address-input::placeholder {
-  color: #888;
+  color: #043d06; /* Light green placeholder text */
   font-size: 16px;
 }
 
@@ -58,20 +68,21 @@
 .address-submit-button {
   border-radius: 5px;
   justify-content: center;
-  padding: 25px 29px;
+  padding: 15px 20px; /* Adjusted padding */
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: white;
+  color: #ffffff; /* White text */
+  background: #4caf50; /* Light green background */
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2); /* Light green shadow */
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .address-submit-button:hover {
-  background: linear-gradient(90deg, #218838, #28a745);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #81c784, #4caf50); /* Gradient from light to standard green */
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3); /* Darker light green shadow */
 }
 
 /* Responsive Adjustments */

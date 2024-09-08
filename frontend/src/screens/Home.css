@@ -1,41 +1,65 @@
-/* General Container Styling */
+/* Container Styles */
 .container1 {
   padding: 20px;
 }
 
-/* Search Bar Styling */
+/* Green Category Button Styles */
+.btn-outline-success {
+  color: #05ae2a; /* Updated to the new green */
+  border-color: #05ae2a; /* Updated to the new green */
+  background-color: transparent; /* Transparent background */
+}
+
+.btn-outline-success:hover {
+  color: #ffffff; /* White text color on hover */
+  background-color: #05ae2a; /* New green background color on hover */
+  border-color: #05ae2a; /* New green border color on hover */
+}
+
+.btn-success {
+  background-color: #05ae2a; /* Updated to the new green */
+  color: #ffffff; /* White text color */
+  border: 1px solid #05ae2a; /* Updated to the new green */
+}
+
+.btn-success:hover {
+  background-color: #049b24; /* Slightly darker green on hover */
+  color: #ffffff; /* White text color on hover */
+}
+
+/* Search Bar Styles */
 .search-bar {
-  border-radius: 25px; /* Smooth rounded corners */
-  width: 100%; /* Full width for better responsiveness */
-  max-width: 300px; /* Maximum width for larger screens */
-  padding: 10px; /* Add padding for better spacing */
-  border: 1px solid black; /* Blue border for contrast */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle 3D effect */
-  transition: all 0.3s ease-in-out; /* Smooth transition for focus effects */
+  border-radius: 25px;
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  border: 1.5px solid #05ae2a; /* Updated to the new green */
+  box-shadow: 0px 4px 8px rgba(5, 174, 42, 0.4); /* Updated to match new green */
+  transition: all 0.3s ease-in-out;
 }
 
 .search-bar:focus {
-  width: 100%; /* Expand width on focus */
-  max-width: 300px; /* Maintain maximum width on focus */
-  outline: none; /* Remove default outline */
-  border-color: #0056b3; /* Darken border color on focus */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on focus */
+  width: 100%;
+  max-width: 350px;
+  outline: none;
+  border-color: #05ae2a; /* Updated to the new green */
+  box-shadow: 0px 6px 12px rgba(5, 174, 42, 0.6); /* Updated to match new green */
 }
 
 .search-bar::placeholder {
-  color: #6c757d; /* Gray color for placeholder text */
-  opacity: 1; /* Ensure placeholder is visible */
+  color: #05ae2a; /* Updated to the new green */
+  opacity: 1;
 }
 
 .search-bar:hover {
-  border-color: #0056b3; /* Darken border color on hover */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  border-color: #05ae2a; /* Updated to the new green */
+  box-shadow: 0px 6px 12px rgba(5, 174, 42, 0.6); /* Updated to match new green */
 }
 
-/* Category Buttons */
+/* Category Buttons Styles */
 .category-buttons .btn {
   transition: all 0.3s ease;
-  border-radius: 50px; /* Rounded buttons */
+  border-radius: 50px;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 600;
@@ -43,17 +67,30 @@
   letter-spacing: 1px;
 }
 
-.category-buttons .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.category-buttons .btn-outline-success {
+  color: #05ae2a; /* Updated to the new green */
+  border-color: #05ae2a; /* Updated to the new green */
+  background-color: transparent; /* Transparent background */
 }
 
-/* Product Card Styling */
+.category-buttons .btn-outline-success:hover {
+  color: #ffffff; /* White text color on hover */
+  background-color: #05ae2a; /* New green background color on hover */
+  border-color: #05ae2a; /* New green border color on hover */
+}
+
+.category-buttons .btn-success {
+  background-color: #05ae2a; /* Updated to the new green */
+  color: #ffffff; /* White text color */
+  border: 1px solid #05ae2a; /* Updated to the new green */
+}
+
+/* Card Styles */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
@@ -62,10 +99,10 @@
 }
 
 .card img {
-  border-radius: 10px 10px 0 0; /* Rounded corners on top */
+  border-radius: 12px 12px 0 0;
 }
 
-/* Carousel */
+/* Carousel Styles */
 .carousel-item img {
   transition: filter 0.5s ease;
 }
@@ -74,7 +111,7 @@
   filter: brightness(50%);
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
   margin-top: 40px;
   padding: 20px;
@@ -84,66 +121,67 @@ footer {
   color: #6c757d;
 }
 
-/* General Button Styling */
+/* Button Styles */
 .btn {
-  border-radius: 50px; /* Rounded buttons */
+  border-radius: 50px;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  border: none; /* Remove default border */
+  border: none;
 }
 
-/* Active Button (Green background, white text) */
 .btn-primary {
-  background-color: #28a745; /* Slightly lighter green */
+  background-color: #05ae2a; /* Updated to the new green */
   color: white;
-  border: 2px solid #28a745; /* Match border with background */
+  border: 2px solid #05ae2a; /* Updated to the new green */
 }
 
 .btn-primary:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #049b24; /* Slightly darker green on hover */
   color: white;
-  border-color: #218838; /* Match border with hover background */
+  border-color: #049b24; /* Slightly darker green on hover */
 }
 
-/* Inactive Button (Light background, green text) */
 .btn-outline-primary {
-  background-color: transparent; /* Transparent background */
-  color: #28a745; /* Green text */
-  border: 2px solid #28a745; /* Green border */
+  background-color: transparent;
+  color: #05ae2a; /* Updated to the new green */
+  border: 2px solid #05ae2a; /* Updated to the new green */
 }
 
 .btn-outline-primary:hover {
-  background-color: #28a745; /* Green background on hover */
+  background-color: #05ae2a; /* New green background color on hover */
   color: white;
-  border-color: #28a745; /* Match border with hover background */
+  border-color: #05ae2a; /* New green border color on hover */
 }
 
-/* Message Container */
+/* Message Container Styles */
 .message-container {
+  background-color: #0fc937; /* Gradient from light green to dark green */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 30px;
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  margin: 20px 0;
+  max-width: 100%;
+  margin: 20px auto;
 }
 
 .message-container h2 {
   font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 15px;
 }
 
 .message-container p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-/* Welcome Container (Greeting and Search Bar) */
+
+/* Welcome Container Styles */
 .welcome-container {
   display: flex;
   flex-direction: column;
@@ -151,44 +189,44 @@ footer {
   padding: 2rem;
   background-color: #f8f9fa;
   border-bottom: 2px solid #dee2e6;
-  position: relative; /* Ensure proper positioning of the search bar */
+  position: relative;
 }
 
 .welcome-container .hello-message {
-  margin-bottom: 1rem; /* Add margin for spacing */
+  margin-bottom: 1rem;
 }
 
 .welcome-container .search-bar {
-  position: absolute; /* Position the search bar absolutely */
-  top: 20px; /* Distance from the top */
-  right: 20px; /* Distance from the right */
-  width: 100%; /* Full width for search bar */
-  max-width: 300px; /* Max width for large screens */
-  margin-top: 0; /* No margin on top */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 0;
 }
 
-/* Responsive styles */
+/* Media Queries for Responsive Design */
 @media (max-width: 767.98px) {
   .welcome-container {
     align-items: center;
-    position: static; /* Reset position for small screens */
-    padding: 1rem; /* Adjust padding for small screens */
+    position: static;
+    padding: 1rem;
   }
 
   .welcome-container .search-bar {
-    position: static; /* Position search bar normally */
-    margin-top: 1rem; /* Margin for spacing below "Hello" message */
-    width: 100%; /* Full width for search bar */
-    max-width: none; /* Remove max-width on small screens */
-    text-align: center; /* Center align search bar on small screens */
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: none;
+    text-align: center;
   }
 
   .message-container h2 {
-    font-size: 1.5rem; /* Smaller font size on very small screens */
+    font-size: 1.5rem;
   }
 
   .message-container p {
-    font-size: 0.875rem; /* Smaller font size on very small screens */
+    font-size: 0.875rem;
   }
 }
 
@@ -231,18 +269,18 @@ footer {
   }
 }
 
-/* Gradient text for hello-message */
+/* Hello Message Gradient Text */
 .hello-message h2 {
-  background: linear-gradient(90deg, #ca0886, #d48d11); /* Gradient from yellow to tomato */
+  background: linear-gradient(90deg, #ca0886, #d48d11);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .hello-message p {
-  background: linear-gradient(90deg, #ca0886, #d48d11); /* Gradient from yellow to tomato */
-  -webkit-background-clip: text;
+  background: linear-gradient(90deg, #ca0886, #d48d11);
   font-size: 22px;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }

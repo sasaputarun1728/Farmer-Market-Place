@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 import { useNavigate } from 'react-router-dom';
 import { message, Button, Input, Form } from 'antd';
+import Navbar from '../components/Navbar'; // Import Navbar component
 import './Address.css'; // Import custom CSS for styling
 
 export default function Address() {
@@ -67,113 +68,116 @@ export default function Address() {
     };
 
     return (
-        <div className="address-container">
-            <h2 className="address-title">Shipping Address</h2>
-            <Form className="address-form" onSubmitCapture={handleSubmit}>
-                <Form.Item label="First Name">
-                    <Input
-                        id="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        placeholder="First Name"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+        <>
+            <Navbar /> {/* Include the Navbar component */}
+            <div className="address-container">
+                <h2 className="address-title">Shipping Address</h2>
+                <Form className="address-form" onSubmitCapture={handleSubmit}>
+                    <Form.Item label="First Name">
+                        <Input
+                            id="firstName"
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                            placeholder="First Name"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="Last Name">
-                    <Input
-                        id="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        placeholder="Last Name"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="Last Name">
+                        <Input
+                            id="lastName"
+                            value={formData.lastName}
+                            onChange={handleInputChange}
+                            placeholder="Last Name"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="Street Address">
-                    <Input
-                        id="street"
-                        value={formData.street}
-                        onChange={handleInputChange}
-                        placeholder="Street Address"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="Street Address">
+                        <Input
+                            id="street"
+                            value={formData.street}
+                            onChange={handleInputChange}
+                            placeholder="Street Address"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="Apartment, suite, etc. (optional)">
-                    <Input
-                        id="apartment"
-                        value={formData.apartment}
-                        onChange={handleInputChange}
-                        placeholder="Apartment, suite, etc. (optional)"
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="Apartment, suite, etc. (optional)">
+                        <Input
+                            id="apartment"
+                            value={formData.apartment}
+                            onChange={handleInputChange}
+                            placeholder="Apartment, suite, etc. (optional)"
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="City">
-                    <Input
-                        id="city"
-                        value={formData.city}
-                        onChange={handleInputChange}
-                        placeholder="City"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="City">
+                        <Input
+                            id="city"
+                            value={formData.city}
+                            onChange={handleInputChange}
+                            placeholder="City"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="State">
-                    <Input
-                        id="state"
-                        value={formData.state}
-                        onChange={handleInputChange}
-                        placeholder="State"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="State">
+                        <Input
+                            id="state"
+                            value={formData.state}
+                            onChange={handleInputChange}
+                            placeholder="State"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="ZIP Code">
-                    <Input
-                        id="pincode"
-                        value={formData.pincode}
-                        onChange={handleInputChange}
-                        placeholder="ZIP Code"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="ZIP Code">
+                        <Input
+                            id="pincode"
+                            value={formData.pincode}
+                            onChange={handleInputChange}
+                            placeholder="ZIP Code"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="Country">
-                    <Input
-                        id="country"
-                        value={formData.country}
-                        onChange={handleInputChange}
-                        placeholder="Country"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="Country">
+                        <Input
+                            id="country"
+                            value={formData.country}
+                            onChange={handleInputChange}
+                            placeholder="Country"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <Form.Item label="Phone">
-                    <Input
-                        id="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="Phone Number"
-                        required
-                        className="address-input"
-                    />
-                </Form.Item>
+                    <Form.Item label="Phone">
+                        <Input
+                            id="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            placeholder="Phone Number"
+                            required
+                            className="address-input"
+                        />
+                    </Form.Item>
 
-                <div className="address-submit">
-                    <Button type="primary" htmlType="submit" className="address-submit-button">
-                        Place Order
-                    </Button>
-                </div>
-            </Form>
-        </div>
+                    <div className="address-submit">
+                        <Button type="primary" htmlType="submit" className="address-submit-button">
+                            Place Order
+                        </Button>
+                    </div>
+                </Form>
+            </div>
+        </>
     );
 }
