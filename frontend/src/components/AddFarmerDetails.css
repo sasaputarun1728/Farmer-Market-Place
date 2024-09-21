@@ -1,38 +1,38 @@
 /* components/AddFarmerDetails.css */
 .form-container1 {
-    background-color: #f8f9fa;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .form-header {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-  }
-  
-  .section-header {
-    font-size: 22px;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .submit-button {
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .submit-button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
+  background-color: #e9f7ef; /* Light green background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50; /* Darker green */
+  text-align: center;
+}
+
+.section-header {
+  font-size: 22px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #27ae60; /* Medium green */
+}
+
+.submit-button {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #28a745; /* Green background */
+  border-color: #28a745; /* Matching border color */
+  color: white; /* White text */
+}
+
+.submit-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  border-color: #1e7e34; /* Darker border on hover */
+}

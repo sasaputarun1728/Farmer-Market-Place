@@ -1,48 +1,63 @@
 .footer {
-/* Light green color */
-    padding: 10px 0; /* Reduce padding to decrease height */
-    color: #190202; /* Text color */
-    text-align: center;
-    font-size: 18px; /* Increase the text size */
+  padding: 10px 0; /* Reduce padding to decrease height */
+  color: #190202; /* Text color */
+  text-align: center;
+  font-size: 18px; /* Increase the text size */
+}
+
+.footer .container6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.footer .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content */
+}
+
+.footer .text-muted {
+  color: #37ed1b; /* Adjust color for muted text */
+}
+
+.footer .nav {
+  padding: 0;
+  margin: 10px 0; /* Adjust margin to fit within the footer */
+  display: flex; /* Use flexbox for nav items */
+  flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
+  justify-content: center; /* Center nav items */
+}
+
+.footer .nav li {
+  margin: 0 10px;
+}
+
+.footer .nav a {
+  color: #0fcd05; /* Dark text color for better visibility */
+  text-decoration: none;
+}
+
+.footer .nav a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Adjust footer heading size */
+.footer h2 {
+  font-size: 20px; /* Adjust as needed */
+}
+
+/* Media queries for additional responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 16px; /* Smaller font size for mobile */
   }
-  
-  .footer .container6 {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    height: 10px;
-  }
-  
-  .footer .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the content */
-  }
-  
-  .footer .text-muted {
-    color: #37ed1b; /* Adjust color for muted text */
-  }
-  
-  .footer .nav {
-    padding: 0;
-    margin: 10px 0; /* Adjust margin to fit within the footer */
-  }
-  
-  .footer .nav li {
-    margin: 0 10px;
-  }
-  
-  .footer .nav a {
-    color: #0fcd05; /* Dark text color for better visibility */
-    text-decoration: none;
-  }
-  
-  .footer .nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Optional: Adjust footer heading size */
+
   .footer h2 {
-    font-size: 20px; /* Adjust as needed */
+    font-size: 18px; /* Adjust heading size for smaller screens */
   }
-  
+
+  .footer .nav li {
+    margin: 5px 0; /* Stack nav items vertically on smaller screens */
+  }
+}

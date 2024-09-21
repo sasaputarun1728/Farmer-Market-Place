@@ -120,8 +120,12 @@ export default function Signup() {
                             id="exampleInputGeolocation1"
                         />
                     </div>
-                    <button type="submit" className="m-3 btn btn-success">Submit</button>
-                    <Link to="/login" className='m-3 btn btn-danger'>Already a User</Link>
+                    <button type="submit" className="m-3 btn" style={{color:'white',backgroundColor: 'green', borderRadius: '10px',fontWeight:'500' }}>
+  Submit
+</button>
+          <Link to="/login" className="m-3 btn btn-danger" style={{borderRadius: '10px', fontWeight:'500' }}>
+           Already a User
+                    </Link>
                 </form>
             </div>
         </div>

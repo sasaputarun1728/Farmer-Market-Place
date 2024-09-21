@@ -11,6 +11,34 @@ body {
   color: #fff;
 }
 
+/* Container Styling */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 20px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url('https://images.pexels.com/photos/1838552/pexels-photo-1838552.jpeg?auto=compress&cs=tinysrgb&w=1600&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Form Container */
+.form-container {
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  background: transparent;
+  max-width: 400px;
+  border: 1px solid #ddd;
+}
+
 /* Carousel */
 #carousel {
   margin-top: 7px;
@@ -41,33 +69,7 @@ body {
   margin: 0 auto;
 }
 
-/* Container Styling */
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  border-radius: 20px;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ), url('https://images.pexels.com/photos/1838552/pexels-photo-1838552.jpeg?auto=compress&cs=tinysrgb&w=1600&h=750&dpr=2');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-/* Form Container */
-.form-container {
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  background: transparent;
-  max-width: 400px;
-  border: 1px solid #ddd;
-}
 
 /* Form Control Focus Effect */
 .form-control:focus {
@@ -316,6 +318,16 @@ button.btn-lg:hover {
   box-sizing: border-box;
   padding: 0.5rem;
 }
+.profile-menu {
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+@media (max-width: 768px) {
+  .profile-menu {
+    right: 0; /* Adjust position for mobile view */
+    width: 80%; /* Optional: make it wider on mobile */
+  }
+}
 
 @media (max-width: 768px) {
   .container {
@@ -336,3 +348,4 @@ button.btn-lg:hover {
     padding: 10px;
   }
 }
+

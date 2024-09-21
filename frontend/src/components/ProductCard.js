@@ -4,6 +4,7 @@ import { useDispatchCart, useCart } from "./ContextReducer";
 import { message } from "antd";
 import { useNavigate } from "react-router-dom";
 import './ProductCard.css'; // Ensure this file imports the custom styles
+import { FaAngleDown, FaAngleUp } from "react-icons/fa"; // Icons for arrow up/down
 
 export default function ProductCard({ product }) {
   const [selectedQuantity, setSelectedQuantity] = useState(
@@ -16,6 +17,7 @@ export default function ProductCard({ product }) {
 
   // State to manage visibility of cart indicator
   const [isCartVisible, setIsCartVisible] = useState(cartItems.length > 0);
+  const [showFarmerDetails, setShowFarmerDetails] = useState(false); // New state for farmer details
 
   const isLoggedIn = !!localStorage.getItem("token");
 
@@ -64,6 +66,10 @@ export default function ProductCard({ product }) {
       : `${experience} years`;
   };
 
+  const toggleFarmerDetails = () => {
+    setShowFarmerDetails(!showFarmerDetails);
+  };
+
   return (
     <>
       <Card
@@ -86,7 +92,7 @@ export default function ProductCard({ product }) {
             borderRadius: "12px 12px 0 0",
           }}
         />
-        <Card.Body>
+        <Card.Body style={{ backgroundColor: "#f5f5f5", borderRadius: "0 0 12px 12px" }}>
           <Card.Title
             style={{ fontSize: "1.6rem", fontWeight: "bold", color: "#2c3e50" }}
           >
@@ -130,7 +136,7 @@ export default function ProductCard({ product }) {
             variant="primary"
             style={{
               borderRadius: "50px",
-              backgroundColor:"#05ae2a",
+              backgroundColor: "#05ae2a",
               padding: "12px 15px",
               display: "block",
             }}
@@ -139,25 +145,46 @@ export default function ProductCard({ product }) {
             Add to Cart
           </Button>
         </Card.Body>
+
+        {/* Toggle Button for Farmer Details */}
         <Card.Footer
-          style={{ backgroundColor: "#ecf0f1", borderRadius: "0 0 12px 12px" }}
+          style={{
+            backgroundColor: "#f5f5f5",
+            borderRadius: "0 0 12px 12px",
+            textAlign: "center",
+          }}
         >
-          <div style={{ fontSize: "1rem", color: "#2c3e50" }}>
-            <strong>Farmer:</strong> {product?.farmer?.name || "Unknown"}
-            <br />
-            <strong>Experience:</strong>{" "}
-            {formatExperience(product?.farmer?.experience) || "N/A"}
-            <br />
-            <strong>Location:</strong> {product?.farmer?.location || "N/A"}
-            <br />
-            <strong>Contact:</strong>{" "}
-            <a
-              href={`tel:${product?.farmer?.contactNumber || ""}`}
-              style={{ color: "#2980b9" }}
-            >
-              {product?.farmer?.contactNumber || "Not available"}
-            </a>
-          </div>
+          <Button
+            variant="link"
+            onClick={toggleFarmerDetails}
+            style={{
+              fontSize: "1rem",
+              fontWeight: "bold",
+              color: "#2980b9",
+            }}
+          >
+            Farmer Details {showFarmerDetails ? <FaAngleUp /> : <FaAngleDown />}
+          </Button>
+
+          {/* Conditionally render the farmer details */}
+          {showFarmerDetails && (
+            <div style={{ fontSize: "1rem", color: "#2c3e50", marginTop: "10px" }}>
+              <strong>Farmer:</strong> {product?.farmer?.name || "Unknown"}
+              <br />
+              <strong>Experience:</strong>{" "}
+              {formatExperience(product?.farmer?.experience) || "N/A"}
+              <br />
+              <strong>Location:</strong> {product?.farmer?.location || "N/A"}
+              <br />
+              <strong>Contact:</strong>{" "}
+              <a
+                href={`tel:${product?.farmer?.contactNumber || ""}`}
+                style={{ color: "#2980b9" }}
+              >
+                {product?.farmer?.contactNumber || "Not available"}
+              </a>
+            </div>
+          )}
         </Card.Footer>
       </Card>
 

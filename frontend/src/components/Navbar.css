@@ -3,7 +3,10 @@
   padding: 10px 20px;
   background-color: #05ae2a; /* Green background */
   z-index: 1000; /* Keep navbar on top */
-  position: relative; /* Ensure proper positioning of absolute elements */
+  position: sticky; /* Make navbar sticky */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Aligns to the left */
+  right: 0; /* Aligns to the right */
   box-shadow: 0 4px 12px rgba(10, 10, 10, 0.1);
   display: flex;
   justify-content: space-between; /* Align items horizontally */
@@ -12,7 +15,6 @@
 
 /* Brand Styling */
 .custom-brand {
-  font-family: 'Georgia', serif;
   color: #fff !important; /* Text color to white */
 }
 
@@ -20,113 +22,130 @@
   color: #f8f9fa; /* Lighter hover effect */
 }
 
-/* Link Styling */
-.custom-link {
-  color: #fff !important; /* Text color to white */
+/* Navbar Icons */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between icons */
+}
+
+.navbar-toggler, .custom-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Set a consistent width */
+  height: 50px; /* Set a consistent height */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  position: absolute; /* Position for better alignment */
+  top: 10px; /* Adjust vertical position */
+  right: 10px; /* Align to the right */
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 60px 20px 20px; /* Avoid overlap with the close button */
+}
+
+.sidebar-nav .nav-item {
+  margin-bottom: 15px;
+}
+
+.sidebar-nav .nav-link {
+  color: #333;
+  text-decoration: none;
   font-size: 18px;
-  margin-right: 15px;
-  position: relative;
+}
+
+/* Button Styles */
+.btn-outline-success {
+  color: #05ae2a; /* Button text color */
+  border-color: #05ae2a; /* Button border color */
+}
+
+.btn-outline-success:hover {
+  background-color: #05ae2a; /* Button hover background */
+  color: white; /* Button hover text color */
+}
+
+.btn-success {
+  background-color: #05ae2a; /* Button background */
+  color: white; /* Button text color */
+}
+
+.btn-success:hover {
+  background-color: #048c2e; /* Darker green on hover */
+}
+
+/* Logout Button Styling */
+.logout-btn {
+  background: none;
+  border: none;
+  color: white; 
+  background-color: red;
+  padding: 10px 15px; /* Padding for better appearance */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
 }
 
 /* Cart Button Styling */
 .custom-cart-btn {
   color: #fff !important; /* Cart button text color to white */
-  font-size: 30px;
-  position: relative;
+  font-size: 24px; /* Adjusted font size for uniformity */
+  position: relative; /* Add relative positioning */
 }
 
 /* Badge Styling */
-.animate-badge {
-  animation: bounce 1s infinite;
-  background-color: #ff6b6b; /* Bright red for visibility */
-  color: #fff; /* White text for contrast */
-  font-size: 14px; /* Adjust font size for readability */
-  width: 24px; /* Fixed width */
-  height: 24px; /* Fixed height */
-  padding: 4px; /* Adjust padding */
+.badge {
+  background-color: #ff4d4d; /* Brighter red for more contrast */
+  color: white; /* Keep text color white for better readability */
   border-radius: 50%; /* Circular shape */
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  display: inline-flex; /* Use inline-flex for better control */
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box; /* Ensure padding is included in width and height */
+  padding: 4px; /* Adjust padding for better visibility */
+  position: absolute; /* Use absolute positioning */
+  top: -12px; /* Adjust position slightly higher */
+  right: -12px; /* Adjust position slightly more to the right */
+  font-size: 12px; /* Set a readable font size */
+  font-weight: bold; /* Make the number bold */
+  min-width: 20px; /* Adjust minimum width */
+  text-align: center; /* Center the text */
+  z-index: 1; /* Ensure it's above other elements */
 }
-
 
 /* Toggle Button Styling */
 .navbar-toggler {
   border: none;
-  background-color: #1dd1a1;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.navbar-toggler:hover {
-  background-color: #1aa78c; /* Slightly darker on hover */
-}
-
-.navbar-toggler-icon {
-  background-image: url('data:image/svg+xml,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(255,255,255,1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
-  width: 24px;
-  height: 24px;
-}
-
-/* Profile Menu Styling */
-.profile-menu {
-  width: 220px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1200;
-}
-
-.profile-details h5 {
-  font-weight: bold;
-  color: #222;
-}
-
-.profile-details p {
-  color: #555;
-}
-
-/* Alert Styling */
-.custom-alert {
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  z-index: 1050;
-  animation: fadeInOut 3s ease-in-out forwards;
-  background-color: #1dd1a1; /* Green background */
-  padding: 15px;
-  color: white;
-  border-radius: 10px;
-}
-
-/* Navbar Animation */
-.animate-navbar {
-  animation: slideDown 0.5s ease-in-out;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background-color: transparent;
+  cursor: pointer;
+  color: white; /* Set color for toggle icons */
+  font-size: 24px; /* Adjusted font size for uniformity */
 }
 
 /* Logo Styling */
 .custom-logo {
   max-height: 80px;
-  width: auto; 
-  height: 80px;
   padding: 5px;
   border-radius: 12px;
   transition: transform 0.3s ease;
@@ -138,80 +157,28 @@
 
 /* Responsive Design */
 @media (max-width: 991px) {
-  .custom-navbar {
-    padding: 10px;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start;
+  .navbar-icons {
+    gap: 5px; /* Reduce gap on smaller screens */
   }
 
-  .navbar-toggler {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    width: 40px; /* Toggle button size */
+  .navbar-toggler, .custom-cart-btn {
+    width: 50px; /* Keep consistent size for mobile */
+    height: 50px; /* Keep consistent size for mobile */
   }
 
-  .navbar-collapse {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%; /* Full width for better stacking */
+  .sidebar {
+    width: 80%; /* Full width on mobile */
+    left: -80%; /* Hide off-screen */
   }
 
-  .navbar-nav {
-    width: 100%; /* Ensure full width for proper alignment */
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: left; /* Center align the links */
-  }
-
-  .navbar-nav .nav-link {
-    padding: 10px;
-    display: block;
-    font-size: 16px; /* Adjust font size for mobile */
-  }
-
-  /* Cart Button */
-  .custom-cart-btn {
-    margin: 0 15px; /* Space between cart and profile */
-    font-size: 30px;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 0; /* Ensure no padding left */
-    justify-content: left; /* Align cart button to the left */
-    width: auto; /* Ensure it doesn't stretch */
-  }
-
-  /* Profile Menu */
-  .profile-menu {
-    right: auto; /* Disable right positioning */
-    left: 0; /* Align the profile menu to the left */
-    top: 50px;
-    width: 220px;
-    position: relative; /* Keep profile menu on the left */
-    font-size: 18px;
-    color: white;
+  .sidebar.open {
+    left: 0; /* Slide in */
   }
 }
 
-
-/* Fade In/Out Animation */
-@keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-/* Bounce Animation for Badge */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
+@media (max-width: 576px) {
+  .navbar-toggler, .custom-cart-btn {
+    width: 50px; /* Consistent size for smaller screens */
+    height: 50px; /* Consistent size for smaller screens */
   }
 }

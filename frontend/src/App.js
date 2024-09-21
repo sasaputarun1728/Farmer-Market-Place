@@ -28,6 +28,7 @@ function App() {
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
             <Route path="/myOrder" element={<MyOrder />} />
             <Route path="/contact" element={<Contact />} />
+            
             <Route
               path="/add-farmer-details"
               element={<AddFarmerDetails />}

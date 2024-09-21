@@ -108,10 +108,10 @@ export default function Login() {
               </button>
             </div>
           </div>
-          <button type="submit" className="m-3 btn btn-success">
-            Submit
-          </button>
-          <Link to="/createuser" className="m-3 btn btn-danger">
+          <button type="submit" className="m-3 btn" style={{color:'white', backgroundColor: 'green', borderRadius: '5px',fontWeight:'500' }}>
+  Submit
+</button>
+          <Link to="/createuser" className="m-3 btn btn-danger " style={{  borderRadius: '5px',fontWeight:'500' }}>
             I'm a new User
           </Link>
         </form>

@@ -3,6 +3,7 @@ const mongoDB = require("./Db");
 const cors = require("cors");
 const User = require("./models/User");
 
+
 const app = express();
 const port = 5000;
 
@@ -34,11 +35,12 @@ app.get("/api/getUser/:email", async (req, res) => {
   }
 });
 
+// Define other routes
 app.use("/api", require("./routes/CreateUser"));
 app.use("/api", require("./routes/DisplayData"));
 app.use("/api", require("./routes/OrderData"));
 app.use("/api", require("./routes/FarmerDetails"));
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });

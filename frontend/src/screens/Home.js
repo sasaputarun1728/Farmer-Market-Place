@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
-import Footer from "../components/Footer"; // Import the Footer component
-import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
+import { FaArrowUp } from "react-icons/fa"; // Import the up arrow icon
 import "./Home.css";
 
 export default function Home() {
@@ -38,7 +39,7 @@ export default function Home() {
 
   const handleLogout = () => {
     localStorage.removeItem("userEmail");
-    localStorage.removeItem("token"); // Optionally remove the token
+    localStorage.removeItem("token");
     setUserName("guest");
   };
 
@@ -50,7 +51,9 @@ export default function Home() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:5000/api/getUser/${email}`);
+      const response = await fetch(
+        `http://localhost:5000/api/getUser/${email}`
+      );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -79,10 +82,14 @@ export default function Home() {
 
   const filteredItems = foodItem.filter(
     (item) =>
-      item.productName.toLowerCase().includes(search.toLowerCase()) &&
-      (selectedCategories.length === 0 ||
-        selectedCategories.includes(item.category))
+      (item.productName.toLowerCase().includes(search.toLowerCase()) ||
+       item.category.toLowerCase().includes(search.toLowerCase())) && 
+      (selectedCategories.length === 0 || selectedCategories.includes(item.category))
   );
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div>
@@ -98,18 +105,13 @@ export default function Home() {
               <p>Welcome to Farmer's Market</p>
             </>
           )}
-          <div className="sell-item-container mt-3">
-            <Link to="/add-farmer-details" className="btn btn-outline-success">
-              🌾 If you want to sell your item, click here to add
-            </Link>
-          </div>
         </div>
 
         <div className="search-bar">
           <input
             className="form-control"
             type="search"
-            placeholder="🔍 Search for products..."
+            placeholder="🔍 Search for products or categories..."
             aria-label="Search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -229,22 +231,29 @@ export default function Home() {
             ))}
           </div>
         ) : (
-          <div>No Products Found</div>
+          <div style={{ fontSize: '40px', color: 'red', fontWeight: 'bold', textAlign: 'center', marginTop: '20px' }}>
+            No Products Found 😞 
+          </div>
         )}
       </div>
 
-      <div className="message-container">
-        <h2>🎉 Thank You for Visiting Our Marketplace! 🎉</h2>
-        <p>
-          We are thrilled to have you here! 🎁 Your support means the world to us. 🌟
-          Explore our handpicked selection of local products and enjoy unique finds! 🛒
-          Stay tuned for more exciting updates and special offers. 🎊
-        </p>
+      <div className="thankyou-message">
+        <h1>THANK YOU </h1>
+        <h2>FOR VISITING OUR </h2>
+        <h1>MARKETPLACE</h1>
       </div>
 
       <div className="footer">
         <Footer />
       </div>
+
+      <button
+        className="scroll-to-top"
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+      >
+        <FaArrowUp size={30} />
+      </button>
     </div>
   );
 }
