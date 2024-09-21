@@ -84,13 +84,7 @@ export default function Navbar() {
                 </Link>
               </li>
             )}
-            {isLoggedIn && (
-              <li className="nav-item">
-                <Link className="nav-link" to="/FarmerDashboard" onClick={toggleMenu}>
-                  Manage Products
-                </Link>
-              </li>
-            )}
+          
             {isLoggedIn && (
               <li className="nav-item">
                 <button className="logout-btn" onClick={handleLogout}>Logout</button>

@@ -3,7 +3,6 @@
 
 /* Page Background Image */
 body {
-
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -16,16 +15,16 @@ body {
   max-width: 600px;
   margin: 20px auto;
   padding: 30px;
-  background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent background for the container */
+  background-color: rgba(240, 255, 240, 0.9); /* Light greenish background */
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 128, 0, 0.1); /* Lighter green shadow */
 }
 
 /* Title Styling */
 .address-title {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #022103; /* Light green color */
+  color: #2e7d32; /* Darker green for contrast */
   margin-bottom: 25px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -45,7 +44,7 @@ body {
 /* Input Styling */
 .address-input {
   border-radius: 8px;
-  border: 1px solid #c8e6c9; /* Light green border */
+  border: 1px solid #a5d6a7; /* Lighter green border */
   padding: 12px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -54,13 +53,13 @@ body {
 }
 
 .address-input:focus {
-  border-color: #4caf50; /* Light green */
-  box-shadow: 0 0 4px rgba(76, 175, 80, 0.2); /* Light green shadow */
+  border-color: #66bb6a; /* Medium light green */
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.3); /* Lighter green shadow */
 }
 
 /* Input Placeholder Styling */
 .address-input::placeholder {
-  color: #043d06; /* Light green placeholder text */
+  color: #388e3c; /* Medium green placeholder text */
   font-size: 16px;
 }
 
@@ -74,15 +73,15 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffffff; /* White text */
-  background: #4caf50; /* Light green background */
+  background: #66bb6a; /* Medium light green background */
   border: none;
-  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2); /* Light green shadow */
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2); /* Lighter green shadow */
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .address-submit-button:hover {
-  background: linear-gradient(90deg, #81c784, #4caf50); /* Gradient from light to standard green */
-  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3); /* Darker light green shadow */
+  background-color: green; /* Gradient from light to medium green */
+  
 }
 
 /* Responsive Adjustments */
