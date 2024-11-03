@@ -39,7 +39,7 @@ export default function Address() {
         console.log("Form Data:", formData);
 
         try {
-            const response = await fetch("http://localhost:5000/api/orderData", {
+            const response = await fetch("https://farmer-market-place.onrender.com/api/orderData", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
