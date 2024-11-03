@@ -52,7 +52,7 @@ export default function Home() {
     }
     try {
       const response = await fetch(
-        `http://localhost:5000/api/getUser/${email}`
+        `https://farmer-market-place.onrender.com/api/getUser/${email}`
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
