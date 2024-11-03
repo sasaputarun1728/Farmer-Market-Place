@@ -49,7 +49,7 @@ function AddFarmerDetails() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/addFarmerDetails",
+        "https://farmer-market-place.onrender.com/api/addFarmerDetails",
         {
           ...formData,
           quantityOptions: formData.quantityOptions
